@@ -244,3 +244,16 @@ func (g *Game) SpawnFood() {
 		// Otherwise, try again (loop continues)
 	}
 }
+
+func (g *Game) ShowGameOver() {
+	fmt.Print("\033[H\033[2J")
+	fmt.Println("\n\n")
+	fmt.Println("   ╔═══════════════════════════╗")
+	fmt.Println("   ║                           ║")
+	fmt.Println("   ║       GAME OVER!          ║")
+	fmt.Println("   ║                           ║")
+	fmt.Printf("   ║    Final Score: %-3d       ║\n", g.Score)
+	fmt.Println("   ║                           ║")
+	fmt.Println("   ╚═══════════════════════════╝")
+	fmt.Println()
+}
